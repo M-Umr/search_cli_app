@@ -1,0 +1,2 @@
+[console_scripts]
+app = cli_app:cli_app_def
