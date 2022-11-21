@@ -8,7 +8,6 @@ class users:
         
         with open('users.json', 'r+') as f:
             data = json.load(f)
-            #all_unique_fields = get_all_searchable_fields(data) 
             file_name = 'users.json'
             
         return (file_name, data)
@@ -21,7 +20,6 @@ class tickets:
         
         with open('tickets.json', 'r+') as f:
             data = json.load(f)
-            #all_unique_fields = get_all_searchable_fields(data) 
             file_name = 'tickets.json'
             
         return (file_name, data)
@@ -40,7 +38,6 @@ class organizations:
 
 
 class search(users, tickets, organizations):
-
     
     # Searching result
     def search_fun(self, data, file_name):
