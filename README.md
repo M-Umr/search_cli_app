@@ -14,7 +14,7 @@ egg-info file is to contain the project meta-data
 
 Step to create egg-info file
 
-    cd PYTOHN_CLI_APP
+    cd Python_CLI_APP
     
     pip install --editable .
     
