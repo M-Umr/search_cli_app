@@ -2,7 +2,6 @@
 # -*- coding: utf-8 -*-
 import click
 import json
-import os
 
 
 # This function is get all unique searchable fields in the selected json file
