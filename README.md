@@ -18,7 +18,9 @@ Step to create egg-info file
     
     pip install --editable .
     
-# 3. Run the project by typing:
+# 3. Run the project:
+
+    cd ..
     
     app
 
