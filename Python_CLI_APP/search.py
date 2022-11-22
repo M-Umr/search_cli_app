@@ -82,8 +82,5 @@ class search(users, tickets, organizations):
                 for i, (j, k) in enumerate(data[value_id].items()):
                     if j == '_id' or j in field_value:
                         print(f'{j:20}{k}')
-                    else:
-                        print('\nPlease enter correct fields, Thanks')
-                        break
         else:
             print('No result found')
