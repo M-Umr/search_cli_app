@@ -48,11 +48,42 @@ class search(users, tickets, organizations):
         value_id = int(input('Enter term number: '))
         
         if value_id >= 0 and value_id <= (file_length-1):
-            print('''
+            
+            choice = \
+                input('''
+                      Select any option:
+                        * 1) Whole data of selected ID
+                        * 2) Want to see any specific Field data with its ID
+                    ''')
+                
+            if choice == str(1):
+                print('''
 
-    ------------------------SEARCH RESULT------------------------
+------------------------SEARCH RESULT------------------------
     ''')
-            for i, (j, k) in enumerate(data[value_id].items()):
-                print(f'{j:20}{k}')
+                for i, (j, k) in enumerate(data[value_id].items()):
+                    print(f'{j:20}{k}')
+                    
+            elif choice == str(2):
+                print('\nHere all the Fields of the selected ID\n')
+                print(list(data[value_id].keys()))
+                
+                print('\nEnter fields you want to see...\nTo break loop press CTRL+Z and ENTER')
+                field_value=[]
+                while True:
+                    try:
+                        field_value.append(input())   #Each input given by the user gets appended to the list "field_value"
+                    except EOFError:
+                        break 
+                print('''
+
+------------------------SEARCH RESULT------------------------
+    ''')
+                for i, (j, k) in enumerate(data[value_id].items()):
+                    if j == '_id' or j in field_value:
+                        print(f'{j:20}{k}')
+                    else:
+                        print('\nPlease enter correct fields, Thanks')
+                        break
         else:
             print('No result found')
